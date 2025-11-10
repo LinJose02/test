@@ -1,0 +1,227 @@
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    margin: 2%;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total de los elementos */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+header {
+    display: flex; /* Flexbox para el encabezado */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical centrada */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    border-radius: 20px;
+}
+header h1 {
+    margin: 0; /* Sin margen */
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: 700; /* Negrita */
+
+}
+nav {
+    display: flex; /* Flexbox para la navegación */
+    gap: 10px; /* Espacio entre los enlaces */
+}
+nav a {
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Color del texto negro */
+    font-weight: 500; /* Seminegrita */
+}
+nav a.active {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+.discover-btn {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Seminegrita */
+}
+.contact-btn {
+    background-color: #ffffff; /* Fondo negro */
+    color: #000000; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Seminegrita */
+}
+.hero {
+    position: relative; /* Posicionamiento relativo */
+    text-align: center; /* Texto centrado */
+    color: white; /* Texto blanco */
+    width: 100%;
+    height: 600px; /* controla la altura total */
+    overflow: hidden; /* oculta lo que sobresale */
+}
+.hero img {
+    width: 90%; /* Ancho completo */
+    height: 100%; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* rellena el contenedor sin deformarse */
+    object-position:top; /* centra la parte visible */
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro translúcido */
+    backdrop-filter: blur; /* Efecto desenfocado */
+    -webkit-backdrop-filter: blur; /* Compatibilidad Safari */
+    border-radius: 15px;
+    max-width: 100%;
+    color: #fff;
+}
+.hero-text h2 {
+    font-size: clamp(18px, 5vw, 36px); /* Mínimo 18px, ideal 5% del ancho, máximo 36px */
+    margin: 0; /* Sin margen */
+}
+.hero-text p {
+    font-size: clamp(10px, 3vw, 18px); /* Mínimo 10px, ideal 3% del ancho, máximo 18px */
+}
+.categories {
+    position: relative;
+    top: -60px;
+    z-index: 2;
+    display: flex; /* Flexbox para las categorías */
+    justify-content: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre las categorías */
+    margin: 20px auto; /* Margen vertical */
+    flex-wrap: wrap; /* Permite que las categorías se ajusten */
+    max-width: 80%;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+.category {
+    background-color: #e0e0e0; /* Fondo gris claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    flex: 1; /* Ocupa el mismo espacio */
+    cursor: pointer; /* Cursor de puntero */
+}
+.category h3 {
+    margin: 0; /* Sin margen */
+    font-size: 18px; /* Tamaño de fuente mediano */
+    font-weight: 700; /* Negrita */
+}
+.category p {
+    margin: 5px 0 0; /* Margen superior */
+    font-size: 14px; /* Tamaño de fuente pequeño */
+}
+.featured-locations {
+  padding: 20px; /* Espaciado interno */
+}
+
+.featured-locations h2 {
+  font-size: 24px; /* Tamaño de fuente grande */
+  font-weight: 700; /* Negrita */
+  text-align: center;
+}
+
+.locations {
+  display: flex; /* Flexbox para las ubicaciones */
+  gap: 20px; /* Espacio entre las ubicaciones */
+  flex-wrap: wrap; /* Permite que las ubicaciones se ajusten */
+  justify-content: center; /* Centra las tarjetas */
+}
+
+.location {
+  flex: 0 1 300px; /* 🔥 ancho fijo base, no crece más de esto */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el desbordamiento */
+  text-align: center; /* Texto centrado */
+  cursor: pointer; /* Cursor de puntero */
+}
+
+.location img {
+  width: 100%; /* Ancho completo */
+  height: 80%; /* Mantiene proporción */
+}
+
+.location h3 {
+  margin: 10px 0 0; /* Margen superior */
+  font-size: 18px; /* Tamaño de fuente mediano */
+  font-weight: 700; /* Negrita */
+}
+
+.location p {
+  margin: 5px 0 10px; /* Margen vertical */
+  font-size: 14px; /* Tamaño de fuente pequeño */
+}
+
+footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Flexbox para el pie de página */
+    justify-content: space-between; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    border-radius: 20px;
+}
+footer .about{
+    flex: 2;
+    min-width: 200px; 
+}
+
+footer .contact,
+footer .follow {
+    flex: 1; /* Ocupa el mismo espacio */
+    min-width: 200px; /* Ancho mínimo */
+}
+footer h3 {
+    font-size: 18px; /* Tamaño de fuente mediano */
+    font-weight: 700; /* Negrita */
+}
+footer p,
+footer a {
+    font-size: 14px; /* Tamaño de fuente pequeño */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+footer .social-icons {
+    display: flex; /* Flexbox para los íconos sociales */
+    gap: 10px; /* Espacio entre los íconos */
+}
+footer .social-icons a {
+    color: #fff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente mediano */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .categories, .locations {
+        flex-direction: column; /* Dirección de columna */
+        align-items: center; /* Alineación centrada */
+    }
+    .categories{
+        margin-right: auto;
+        margin-right: auto;
+        position: relative;
+        top: 0px;
+    }
+    .category, .location {
+        width: 100%; /* Ancho completo */
+        max-width: 80%; /* Ancho máximo */
+    }
+    .location {
+    flex: 0 1 45%; /* dos por fila */
+}
+}
+
+@media (max-width: 480px) {
+  .location {
+    flex: 0 1 90%; /* una por fila */
+  }
+}
